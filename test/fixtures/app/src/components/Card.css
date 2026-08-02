@@ -1,0 +1,27 @@
+.card {
+  background-color: #ffffff;
+  color: #242424;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+  background-image: url('/img/#notacolor.png');
+}
+
+.card__header {
+  color: #616161;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card--danger {
+  color: white;
+  background: linear-gradient(90deg, #c50f1f 0%, #b10e1c 100%);
+}
+
+.card__icon {
+  fill: #0f6cbd;
+  stroke: hsl(206, 100%, 40%);
+}
+
+.dark .card {
+  background-color: #292929;
+  color: #ffffff;
+}
