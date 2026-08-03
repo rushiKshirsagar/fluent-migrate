@@ -95,21 +95,18 @@ npx fluent-migrate fix ./src --preprocessor-vars  # also rewrite $vars
 | `approx` | Visible shift to the nearest suitable token |
 | `no fit` | Keep a custom value |
 
-Matching is role-aware (`#fff` as text ≠ `#fff` as background), theme-aware (light/dark), and uses perceptual distance rather than hex equality. Details: [docs/how-it-works.md](docs/how-it-works.md).
+Matching is role-aware (`#fff` as text ≠ `#fff` as background), theme-aware (light/dark), and uses perceptual distance rather than hex equality. Details: [how it works](https://github.com/rushiKshirsagar/fluent-migrate/blob/main/docs/how-it-works.md).
 
 ## Optional: VS Code Copilot
 
-Slash-command prompts live in [`.github/prompts/`](.github/prompts/). They are **not** installed with the npm package — copy them into the app you are migrating:
+Prompt templates ship in the package under `prompts/`. After installing, copy them into your app:
 
-```text
-your-app/
-  .github/
-    prompts/
-      fluent-scan.prompt.md
-      fluent-plan.prompt.md
-      fluent-fix-preview.prompt.md
-      fluent-prompt.prompt.md
+```bash
+mkdir -p .github/prompts
+cp node_modules/fluent-migrate/prompts/*.prompt.md .github/prompts/
 ```
+
+Or grab them from the repo: [`.github/prompts/`](https://github.com/rushiKshirsagar/fluent-migrate/tree/main/.github/prompts).
 
 Then in Copilot Chat:
 
